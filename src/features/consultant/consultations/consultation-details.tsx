@@ -37,7 +37,7 @@ export function ConsultantConsultationDetails() {
 
   const consultation = useMemo(() => consultations.find((c) => c.id === consultationId), [consultationId]);
   const client = useMemo(() => clients.find((c) => c.id === consultation?.clientId), [consultation?.clientId]);
-  const clientName = useMemo(() => users.find((u) => u.id === client?.userId)?.fullName ?? "[CLIENT_NAME]", [client?.userId]);
+  const clientName = useMemo(() => users.find((u) => u.id === client?.userId)?.fullName ?? "Клиент", [client?.userId]);
   const system = useMemo(() => services.find((s) => s.id === consultation?.serviceId)?.system ?? "BaZi", [consultation?.serviceId]);
   const recs = useMemo(() => recommendations.filter((r) => r.consultationId === consultationId), [consultationId]);
   const acts = useMemo(() => activations.filter((a) => a.clientId === consultation?.clientId), [consultation?.clientId]);

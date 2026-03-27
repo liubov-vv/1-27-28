@@ -12,7 +12,7 @@ type CTASectionProps = {
 
 export function CTASection({ eyebrow, title, description, primaryCta, secondaryCta }: CTASectionProps) {
   return (
-    <div className="rounded-2xl border border-[rgb(var(--border))] bg-[rgb(var(--surface))] p-6 shadow-[0_2px_24px_rgba(19,29,52,0.05)] sm:p-8">
+    <div className="rounded-3xl border border-[rgb(var(--border))] bg-[rgb(var(--surface))] p-8 shadow-[0_16px_48px_rgba(19,29,52,0.1)] sm:p-10">
       <SectionHeading eyebrow={eyebrow} title={title} description={description} />
       <div className="mt-6 flex flex-wrap gap-3">
         <Link href={primaryCta.href}>

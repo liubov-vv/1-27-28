@@ -13,7 +13,7 @@ type DashboardShellProps = {
 };
 
 export function DashboardShell({ children, sidebarItems, sidebarTitle, topbar }: DashboardShellProps) {
-  const greetingName = topbar?.greetingName ?? "[CONSULTANT_NAME]";
+  const greetingName = topbar?.greetingName ?? "Эксперт VIBO";
   const activeClientsCount = topbar?.activeClientsCount ?? 3;
   const unreadCount = topbar?.unreadCount ?? 1;
 

@@ -7,6 +7,6 @@ export const consultants: Consultant[] = [
     systems: ["BaZi", "Qi Men Dun Jia", "Date Selection"],
     yearsExperience: 8,
     rating: 4.9,
-    bio: "[VALUE_PROPOSITION]"
+    bio: "Помогаю клиентам превращать сложные жизненные и бизнес-запросы в понятные шаги с измеримым результатом."
   }
 ];

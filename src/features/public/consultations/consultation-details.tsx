@@ -58,10 +58,10 @@ export function ConsultationDetails() {
         <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
           <div>
             <div className="text-xs font-semibold uppercase tracking-wide text-[rgb(var(--text-muted))]">Консультация</div>
-            <h1 className="mt-3 text-3xl font-semibold tracking-tight">{consultation?.topic ?? "[CONSULTATION_TITLE]"}</h1>
+            <h1 className="mt-3 text-3xl font-semibold tracking-tight">{consultation?.topic ?? "Стратегическая консультация"}</h1>
             <p className="mt-2 text-sm text-[rgb(var(--text-muted))]">
-              {service?.system ?? "Система"} • Консультант {consultantUser?.fullName ?? "[CONSULTANT_NAME]"} • Клиент{" "}
-              {clientUser?.fullName ?? "[CLIENT_NAME]"}
+              {service?.system ?? "Система"} • Консультант {consultantUser?.fullName ?? "Эксперт VIBO"} • Клиент{" "}
+              {clientUser?.fullName ?? "Клиент"}
             </p>
           </div>
           <div className="flex flex-wrap gap-3">
@@ -121,7 +121,7 @@ export function ConsultationDetails() {
                       </div>
                     </div>
                     <div className="text-sm text-[rgb(var(--text-muted))]">
-                      {consultation?.topic ?? "[CONSULTATION_TITLE]"} — запрос сформулирован так, чтобы вы получили четкий план действий.
+                      {consultation?.topic ?? "Стратегическая консультация"} — запрос сформулирован так, чтобы вы получили четкий план действий.
                     </div>
                   </CardContent>
                 </Card>
@@ -134,7 +134,7 @@ export function ConsultationDetails() {
                       показываем структуру экранов и типографику, чтобы позже подключить реальные данные.
                     </p>
                     <div className="rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--surface-muted))] p-4 text-sm text-[rgb(var(--text-muted))]">
-                      [ANALYSIS_PLACEHOLDER]
+                      Сначала фиксируем ключевой контекст, затем выделяем 2-3 сценария и формируем маршрут внедрения с контрольными точками.
                     </div>
                   </CardContent>
                 </Card>

@@ -3,10 +3,10 @@ import { Service } from "@/lib/types/models";
 export const services: Service[] = [
   {
     id: "s1",
-    title: "[CONSULTATION_TITLE]",
+    title: "Стратегическая консультация по BaZi",
     system: "BaZi",
     durationMin: 90,
     priceFrom: 12000,
-    description: "[VALUE_PROPOSITION]"
+    description: "Структурный разбор запроса с понятным планом действий и последующим сопровождением."
   }
 ];

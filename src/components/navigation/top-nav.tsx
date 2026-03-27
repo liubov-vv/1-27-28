@@ -6,7 +6,7 @@ export function TopNav() {
     <header className="sticky top-0 z-20 border-b border-[rgb(var(--border))] bg-[rgb(var(--bg))]/95 backdrop-blur">
       <div className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-10">
         <Link href="/" className="text-sm font-semibold tracking-wide">
-          [PLATFORM_NAME]
+          VIBO Strategy
         </Link>
         <nav className="hidden items-center gap-6 text-sm text-[rgb(var(--text-muted))] md:flex">
           <Link href="/about">О платформе</Link>

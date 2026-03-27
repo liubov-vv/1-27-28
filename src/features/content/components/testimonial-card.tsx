@@ -11,9 +11,9 @@ export function TestimonialCard({ testimonialId }: TestimonialCardProps) {
   if (!t) return null;
 
   const client = clients.find((c) => c.id === t.clientId);
-  const reviewerName = users.find((u) => u.id === client?.userId)?.fullName ?? "[CLIENT_NAME]";
+  const reviewerName = users.find((u) => u.id === client?.userId)?.fullName ?? "Клиент";
   const consultant = consultants.find((c) => c.id === t.consultantId);
-  const consultantName = users.find((u) => u.id === consultant?.userId)?.fullName ?? "[CONSULTANT_NAME]";
+  const consultantName = users.find((u) => u.id === consultant?.userId)?.fullName ?? "Эксперт VIBO";
 
   return (
     <Card>

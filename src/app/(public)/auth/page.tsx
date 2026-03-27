@@ -5,7 +5,7 @@ export default function AuthIndexPage() {
   return (
     <PageContainer className="py-10">
       <div className="mx-auto max-w-md text-center">
-        <h1 className="text-3xl font-semibold tracking-tight">[PLATFORM_NAME]</h1>
+        <h1 className="text-3xl font-semibold tracking-tight">VIBO Strategy</h1>
         <p className="mt-2 text-sm text-[rgb(var(--text-muted))]">Войдите или создайте аккаунт.</p>
         <div className="mt-6 flex flex-col gap-3">
           <Link href="/auth/login">

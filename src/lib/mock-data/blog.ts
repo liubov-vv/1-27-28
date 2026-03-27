@@ -3,9 +3,9 @@ import { BlogArticle } from "@/lib/types/models";
 export const blogArticles: BlogArticle[] = [
   {
     id: "b1",
-    title: "[ARTICLE_TITLE]",
+    title: "Как превратить консультацию в систему действий",
     slug: "blog-article-title",
-    excerpt: "[TAGLINE]",
+    excerpt: "Редакционный материал о том, как фиксировать решения и поддерживать долгосрочный эффект.",
     category: "Отношения",
     tags: ["динамика", "сценарии", "доверие"],
     content: "Редакционный заглушка-контент. Ниже — структурированные секции для долгого чтения.",

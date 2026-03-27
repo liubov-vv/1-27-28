@@ -12,8 +12,8 @@ import { Tabs } from "@/components/ui/tabs";
 import { Textarea } from "@/components/ui/textarea";
 
 const rows = [
-  { name: "[CLIENT_NAME]", service: "[CONSULTATION_TITLE]", status: "completed" },
-  { name: "[CLIENT_NAME]", service: "[CONSULTATION_TITLE]", status: "scheduled" }
+  { name: "Анна Смирнова", service: "Стратегическая консультация", status: "completed" },
+  { name: "Дмитрий Волков", service: "Стратегическая консультация", status: "scheduled" }
 ];
 
 export default function FoundationDemoPage() {
@@ -52,9 +52,9 @@ export default function FoundationDemoPage() {
             </div>
           </CardHeader>
           <CardContent className="space-y-3">
-            <Input placeholder="[CLIENT_NAME]" />
+            <Input placeholder="Имя клиента" />
             <Select options={[{ label: "BaZi", value: "bazi" }, { label: "Qi Men", value: "qimen" }]} />
-            <Textarea placeholder="[RECOMMENDATION_TEXT]" />
+            <Textarea placeholder="Текст рекомендации" />
             <p className="text-sm text-[rgb(var(--success))]">Success: profile updated.</p>
             <p className="text-sm text-[rgb(var(--danger))]">Error: failed to load data.</p>
           </CardContent>

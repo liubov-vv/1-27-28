@@ -40,8 +40,8 @@ export function ConsultationCard({
   consultantName
 }: ConsultationCardProps) {
   return (
-    <Card>
-      <CardHeader>
+    <Card className="rounded-2xl border-[rgb(var(--border))] shadow-[0_8px_24px_rgba(19,29,52,0.06)]">
+      <CardHeader className="pb-3">
         <div className="flex items-start justify-between gap-3">
           <div>
             <CardTitle>{title}</CardTitle>
@@ -52,14 +52,14 @@ export function ConsultationCard({
           {statusBadge(status)}
         </div>
       </CardHeader>
-      <CardContent className="space-y-3">
+      <CardContent className="space-y-3 pt-0">
         <div className="flex items-center justify-between gap-3">
           <div className="text-sm text-[rgb(var(--text-muted))]">{formatDate(scheduledAt)}</div>
           {typeof priceFrom === "number" ? <div className="text-sm font-semibold">{priceFrom.toLocaleString("ru-RU")} ₽+</div> : null}
         </div>
         <div>
           <Link href={`/consultations/${consultationId}`}>
-            <span className="text-sm font-semibold text-[rgb(var(--primary))] hover:opacity-90">Подробнее</span>
+            <span className="text-sm font-semibold text-[rgb(var(--primary))] hover:opacity-90">Открыть консультацию</span>
           </Link>
         </div>
       </CardContent>

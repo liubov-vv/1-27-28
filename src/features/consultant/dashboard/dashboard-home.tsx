@@ -78,7 +78,7 @@ export function DashboardHome() {
   }, [now]);
 
   const consultantUser = users.find((u) => u.id === "u2");
-  const greetingName = consultantUser?.fullName ?? "[CONSULTANT_NAME]";
+  const greetingName = consultantUser?.fullName ?? "Эксперт VIBO";
 
   const upcomingList = useMemo(
     () => (

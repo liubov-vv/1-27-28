@@ -54,7 +54,7 @@ export function ConsultantsDirectory() {
     const q = query.trim().toLowerCase();
 
     const mapped = consultants.map((con) => {
-      const name = users.find((u) => u.id === con.userId)?.fullName ?? "[CONSULTANT_NAME]";
+      const name = users.find((u) => u.id === con.userId)?.fullName ?? "Эксперт VIBO";
       return {
         consultantId: con.id,
         name,

@@ -120,7 +120,7 @@ export default function RegisterPage() {
             <Input
               id="reg-name"
               value={fullName}
-              placeholder="[CLIENT_NAME]"
+              placeholder="Введите ваше имя"
               onChange={(e) => setFullName(e.target.value)}
               disabled={state === "loading"}
             />

@@ -85,7 +85,7 @@ export function ContactsPage() {
                 <div className="text-xs font-semibold uppercase tracking-wide text-[rgb(var(--text-muted))]">Имя</div>
                 <Input
                   value={values.fullName}
-                  placeholder="[CLIENT_NAME]"
+                  placeholder="Например, Анна Смирнова"
                   onChange={(e) => setValues((v) => ({ ...v, fullName: e.target.value }))}
                   aria-invalid={Boolean(errors.fullName)}
                 />
@@ -107,7 +107,7 @@ export function ContactsPage() {
                 <div className="text-xs font-semibold uppercase tracking-wide text-[rgb(var(--text-muted))]">Сообщение</div>
                 <Textarea
                   value={values.message}
-                  placeholder="[RECOMMENDATION_TEXT]"
+                  placeholder="Опишите ваш запрос и желаемый результат"
                   onChange={(e) => setValues((v) => ({ ...v, message: e.target.value }))}
                   aria-invalid={Boolean(errors.message)}
                 />

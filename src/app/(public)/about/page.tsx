@@ -7,7 +7,7 @@ export default function AboutPlatformPage() {
     <PageContainer>
       <SectionContainer>
         <div className="max-w-3xl">
-          <h1 className="text-3xl font-semibold tracking-tight">О платформе [PLATFORM_NAME]</h1>
+          <h1 className="text-3xl font-semibold tracking-tight">О платформе VIBO Strategy</h1>
           <p className="mt-3 text-sm leading-7 text-[rgb(var(--text-muted))]">
             Это премиальная SaaS-платформа для китайской метафизики: каталог консультаций, удобная работа консультантов с историей и
             долгосрочным сопровождением клиентов.

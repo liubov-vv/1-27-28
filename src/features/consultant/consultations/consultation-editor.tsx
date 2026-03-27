@@ -84,7 +84,7 @@ export function ConsultationEditor({ mode }: { mode: Mode }) {
         <div className="grid gap-4 md:grid-cols-2">
           <div>
             <div className="text-xs font-semibold uppercase tracking-wide text-[rgb(var(--text-muted))]">Тема</div>
-            <Input value={topic} onChange={(e) => setTopic(e.target.value)} placeholder="[CONSULTATION_TITLE]" />
+            <Input value={topic} onChange={(e) => setTopic(e.target.value)} placeholder="Тема консультации" />
           </div>
           <div>
             <div className="text-xs font-semibold uppercase tracking-wide text-[rgb(var(--text-muted))]">Клиент</div>
@@ -117,8 +117,8 @@ export function ConsultationEditor({ mode }: { mode: Mode }) {
         </div>
 
         <EditorSection label="Analysis" value={analysis} onChange={setAnalysis} placeholder="Ключевые выводы анализа..." />
-        <EditorSection label="Recommendations" value={recs} onChange={setRecs} placeholder="[RECOMMENDATION_TEXT]" />
-        <EditorSection label="Activations" value={acts} onChange={setActs} placeholder="[ACTIVATION_TEXT]" />
+        <EditorSection label="Recommendations" value={recs} onChange={setRecs} placeholder="Ключевые рекомендации клиенту..." />
+        <EditorSection label="Activations" value={acts} onChange={setActs} placeholder="План активаций и временные окна..." />
         <EditorSection label="Internal Notes" value={notes} onChange={setNotes} placeholder="Внутренние заметки консультанта..." />
 
         <div className="flex flex-wrap gap-3">

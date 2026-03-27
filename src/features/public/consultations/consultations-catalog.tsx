@@ -87,7 +87,7 @@ export function ConsultationsCatalog() {
         scheduledAt: c.scheduledAt,
         status: c.status,
         priceFrom: service?.priceFrom,
-        consultantName: consultantUser?.fullName ?? "[CONSULTANT_NAME]"
+        consultantName: consultantUser?.fullName ?? "Эксперт VIBO"
       };
     });
 

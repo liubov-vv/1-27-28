@@ -16,9 +16,9 @@ type LoadState = "default" | "loading" | "error" | "empty" | "no-results" | "suc
 
 function resolveReviewer(review: Review) {
   const client = clients.find((c) => c.id === review.clientId);
-  const reviewerName = users.find((u) => u.id === client?.userId)?.fullName ?? "[CLIENT_NAME]";
+  const reviewerName = users.find((u) => u.id === client?.userId)?.fullName ?? "Клиент";
   const consultant = consultants.find((c) => c.id === review.consultantId);
-  const consultantName = users.find((u) => u.id === consultant?.userId)?.fullName ?? "[CONSULTANT_NAME]";
+  const consultantName = users.find((u) => u.id === consultant?.userId)?.fullName ?? "Эксперт VIBO";
   return { reviewerName, consultantName };
 }
 

@@ -15,7 +15,7 @@ type ConsultantCardProps = {
 export function ConsultantCard({ consultantId, name, systems, yearsExperience, rating, bio, className }: ConsultantCardProps) {
   return (
     <Card className={className}>
-      <CardHeader>
+      <CardHeader className="pb-3">
         <div className="w-full">
           <div className="flex items-start justify-between gap-3">
             <div>
@@ -28,7 +28,7 @@ export function ConsultantCard({ consultantId, name, systems, yearsExperience, r
           </div>
         </div>
       </CardHeader>
-      <CardContent>
+      <CardContent className="pt-0">
         <p className="line-clamp-3 text-sm text-[rgb(var(--text-muted))]">{bio}</p>
         <div className="mt-4 flex flex-wrap gap-2">
           {systems.slice(0, 3).map((s) => (
@@ -39,7 +39,7 @@ export function ConsultantCard({ consultantId, name, systems, yearsExperience, r
         </div>
         <div className="mt-4">
           <Link href={`/consultants/${consultantId}`}>
-            <span className="text-sm font-semibold text-[rgb(var(--primary))] hover:opacity-90">Профиль консультанта</span>
+            <span className="text-sm font-semibold text-[rgb(var(--primary))] hover:opacity-90">Профиль и подход</span>
           </Link>
         </div>
       </CardContent>

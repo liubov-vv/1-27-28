@@ -3,10 +3,10 @@ import { KnowledgeArticle } from "@/lib/types/models";
 export const knowledgeArticles: KnowledgeArticle[] = [
   {
     id: "k1",
-    title: "[ARTICLE_TITLE]",
+    title: "Как формировать стратегию решений через BaZi",
     slug: "article-title",
     category: "BaZi",
-    excerpt: "[VALUE_PROPOSITION]",
+    excerpt: "Практический подход: от анализа запроса к понятному набору действий.",
     tags: ["отношения", "цели", "время"],
     content: "Длинный контент заглушка. Этот текст заменяется структурированными секциями ниже.",
     sections: [

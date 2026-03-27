@@ -57,7 +57,7 @@ export function ConsultantProfile() {
       scheduledAt: c.scheduledAt,
       status: c.status,
       priceFrom: service?.priceFrom,
-      consultantName: user?.fullName ?? "[CONSULTANT_NAME]"
+      consultantName: user?.fullName ?? "Эксперт VIBO"
     } as const;
   });
 

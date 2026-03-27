@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "[PLATFORM_NAME]",
-  description: "[TAGLINE]"
+  title: "VIBO Strategy",
+  description: "Стратегические консультации по китайской метафизике в современном цифровом формате."
 };
 
 type RootLayoutProps = Readonly<{ children: React.ReactNode }>;
