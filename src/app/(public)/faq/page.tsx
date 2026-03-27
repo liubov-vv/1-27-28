@@ -5,7 +5,7 @@ import { FAQPage } from "@/features/public/faq/faq-page";
 export default function FAQRoutePage() {
   return (
     <PageContainer>
-      <SectionContainer>
+      <SectionContainer fullScreen={false} centered={false}>
         <FAQPage />
       </SectionContainer>
     </PageContainer>

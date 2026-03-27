@@ -11,7 +11,7 @@ export function SectionContainer({ children, className, fullScreen = true, cente
   return (
     <section
       className={cn(
-        "w-full py-8 sm:py-10 lg:py-12",
+        "w-full py-12 sm:py-16 lg:py-20",
         fullScreen && "h-[100svh]",
         centered && "flex items-center",
         className

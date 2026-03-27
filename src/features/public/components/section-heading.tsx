@@ -12,10 +12,10 @@ export function SectionHeading({ eyebrow, title, description, align = "left", cl
   return (
     <div className={cn(align === "center" ? "text-center" : "", className)}>
       {eyebrow ? (
-        <div className="text-xs font-semibold uppercase tracking-wide text-[rgb(var(--text-muted))]">{eyebrow}</div>
+        <div className="text-xs font-semibold uppercase tracking-[0.18em] text-[rgb(var(--text-muted))]">{eyebrow}</div>
       ) : null}
-      <h2 className="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl">{title}</h2>
-      {description ? <p className="mt-3 text-sm text-[rgb(var(--text-muted))] sm:text-base">{description}</p> : null}
+      <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">{title}</h2>
+      {description ? <p className="mt-4 max-w-3xl text-base leading-7 text-[rgb(var(--text-muted))]">{description}</p> : null}
     </div>
   );
 }

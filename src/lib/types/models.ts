@@ -29,6 +29,13 @@ export type Consultant = {
   yearsExperience: number;
   rating: number;
   bio: string;
+  specialization: string;
+  positioning: string;
+  competencies: string[];
+  consultationsCount: number;
+  formats: Array<"Онлайн" | "Офлайн" | "Асинхронно">;
+  languages: string[];
+  avatarBg?: string;
 };
 
 export type Service = {
@@ -38,6 +45,10 @@ export type Service = {
   durationMin: number;
   priceFrom: number;
   description: string;
+  audience: string;
+  result: string;
+  format: "Онлайн" | "Офлайн" | "Асинхронно";
+  tags: string[];
 };
 
 export type Consultation = {
@@ -45,7 +56,7 @@ export type Consultation = {
   clientId: string;
   consultantId: string;
   serviceId: string;
-  status: "draft" | "scheduled" | "completed";
+  status: "draft" | "scheduled" | "in_progress" | "completed" | "pending_confirmation" | "follow_up";
   scheduledAt: string;
   topic: string;
 };

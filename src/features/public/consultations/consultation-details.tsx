@@ -14,6 +14,14 @@ import { Button } from "@/components/ui/button";
 
 type LoadState = "loading" | "error" | "empty" | "success";
 
+function statusLabel(status?: string) {
+  if (status === "completed") return "Завершена";
+  if (status === "in_progress") return "В работе";
+  if (status === "pending_confirmation" || status === "draft") return "Требует подтверждения";
+  if (status === "follow_up") return "Есть follow-up";
+  return "Запланирована";
+}
+
 export function ConsultationDetails() {
   const params = useParams<{ consultationId: string }>();
   const searchParams = useSearchParams();
@@ -54,7 +62,7 @@ export function ConsultationDetails() {
 
   return (
     <PageContainer>
-      <SectionContainer>
+      <SectionContainer fullScreen={false} centered={false}>
         <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
           <div>
             <div className="text-xs font-semibold uppercase tracking-wide text-[rgb(var(--text-muted))]">Консультация</div>
@@ -68,13 +76,13 @@ export function ConsultationDetails() {
             <Link href="/consultations">
               <span className="text-sm font-semibold text-[rgb(var(--primary))] hover:opacity-90">Назад к каталогу</span>
             </Link>
-            <Button variant="secondary">Запросить follow-up</Button>
+            <Button variant="secondary">Запросить сопровождение</Button>
           </div>
         </div>
       </SectionContainer>
 
       {state === "loading" ? (
-        <SectionContainer className="space-y-4">
+        <SectionContainer fullScreen={false} centered={false} className="space-y-4">
           <Skeleton className="h-6 w-2/3" />
           <Skeleton className="h-24 w-full" />
           <Skeleton className="h-24 w-full" />
@@ -83,7 +91,7 @@ export function ConsultationDetails() {
       ) : null}
 
       {state === "error" ? (
-        <SectionContainer>
+        <SectionContainer fullScreen={false} centered={false}>
           <Card className="p-6">
             <div className="text-sm font-semibold text-[rgb(var(--primary))]">Не удалось загрузить консультацию</div>
             <p className="mt-2 text-sm text-[rgb(var(--text-muted))]">Попробуйте снова позже.</p>
@@ -92,21 +100,21 @@ export function ConsultationDetails() {
       ) : null}
 
       {state === "empty" ? (
-        <SectionContainer>
+        <SectionContainer fullScreen={false} centered={false}>
           <EmptyState title="Консультация не найдена" description="Проверьте ссылку или вернитесь в каталог." />
         </SectionContainer>
       ) : null}
 
       {state === "success" ? (
         <>
-          <SectionContainer>
+          <SectionContainer fullScreen={false} centered={false}>
             <div className="grid gap-6 lg:grid-cols-[1fr_0.7fr]">
               <div className="space-y-6">
                 <Card>
                   <CardContent className="p-6 space-y-4">
                     <div className="flex items-center justify-between gap-3">
                       <div className="text-sm font-semibold">Метаданные</div>
-                      <Badge variant="accent">{consultation?.status === "completed" ? "Завершено" : "В работе"}</Badge>
+                      <Badge variant="accent">{statusLabel(consultation?.status)}</Badge>
                     </div>
                     <div className="grid gap-3 sm:grid-cols-2">
                       <div>
@@ -114,10 +122,22 @@ export function ConsultationDetails() {
                         <div className="mt-2 text-sm font-semibold">{service?.system ?? "Система"}</div>
                       </div>
                       <div>
+                        <div className="text-xs font-semibold uppercase tracking-wide text-[rgb(var(--text-muted))]">Формат</div>
+                        <div className="mt-2 text-sm font-semibold">{service?.format ?? "Онлайн"}</div>
+                      </div>
+                      <div>
+                        <div className="text-xs font-semibold uppercase tracking-wide text-[rgb(var(--text-muted))]">Длительность</div>
+                        <div className="mt-2 text-sm font-semibold">{service?.durationMin ? `${service.durationMin} мин` : "Уточняется"}</div>
+                      </div>
+                      <div>
                         <div className="text-xs font-semibold uppercase tracking-wide text-[rgb(var(--text-muted))]">Дата</div>
                         <div className="mt-2 text-sm font-semibold">
                           {consultation?.scheduledAt ? new Date(consultation.scheduledAt).toLocaleDateString("ru-RU") : "-"}
                         </div>
+                      </div>
+                      <div>
+                        <div className="text-xs font-semibold uppercase tracking-wide text-[rgb(var(--text-muted))]">Стоимость</div>
+                        <div className="mt-2 text-sm font-semibold">{service?.priceFrom ? `${service.priceFrom.toLocaleString("ru-RU")} ₽` : "По запросу"}</div>
                       </div>
                     </div>
                     <div className="text-sm text-[rgb(var(--text-muted))]">
@@ -130,11 +150,11 @@ export function ConsultationDetails() {
                   <CardContent className="p-6 space-y-4">
                     <div className="text-sm font-semibold">Анализ</div>
                     <p className="text-sm leading-7 text-[rgb(var(--text-muted))]">
-                      Здесь будет текстовый анализ по BaZi / Qi Men / Feng Shui / I Ching и сопутствующим системам. На этой стадии мы
-                      показываем структуру экранов и типографику, чтобы позже подключить реальные данные.
+                      Консультант переводит ваш запрос в понятную рабочую модель: что влияет на ситуацию сейчас, какие сценарии доступны и какие
+                      действия дадут наибольший эффект в ближайший период.
                     </p>
                     <div className="rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--surface-muted))] p-4 text-sm text-[rgb(var(--text-muted))]">
-                      Сначала фиксируем ключевой контекст, затем выделяем 2-3 сценария и формируем маршрут внедрения с контрольными точками.
+                      Сначала фиксируем контекст и ограничения, затем выделяем 2-3 сценария и формируем маршрут внедрения с контрольными точками.
                     </div>
                   </CardContent>
                 </Card>
@@ -190,8 +210,8 @@ export function ConsultationDetails() {
                   <CardContent className="p-6 space-y-4">
                     <div className="text-sm font-semibold">Дальнейшие шаги</div>
                     <div className="rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--surface-muted))] p-4">
-                      <div className="text-sm font-semibold">1) Follow-up</div>
-                      <div className="mt-2 text-sm text-[rgb(var(--text-muted))]">Отметьте событие или задайте уточняющий вопрос.</div>
+                      <div className="text-sm font-semibold">1) Сопровождение</div>
+                      <div className="mt-2 text-sm text-[rgb(var(--text-muted))]">Зафиксируйте прогресс и задайте уточняющий вопрос по плану.</div>
                     </div>
                     <div className="rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--surface-muted))] p-4">
                       <div className="text-sm font-semibold">2) Закрепление</div>
@@ -226,7 +246,7 @@ export function ConsultationDetails() {
             </div>
           </SectionContainer>
 
-          <SectionContainer>
+          <SectionContainer fullScreen={false} centered={false}>
             <Card>
               <CardContent className="p-6 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
                 <div>

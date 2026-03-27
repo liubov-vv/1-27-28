@@ -5,5 +5,7 @@ export const users: User[] = [
   { id: "u2", role: "consultant", fullName: "Марина Ли", email: "consultant@example.com", status: "active" },
   { id: "u3", role: "client", fullName: "Дмитрий Волков", email: "client2@example.com", status: "active" },
   { id: "u4", role: "client", fullName: "Елена Ковалева", email: "client3@example.com", status: "active" },
-  { id: "u5", role: "client", fullName: "Игорь Беляев", email: "client4@example.com", status: "active" }
+  { id: "u5", role: "client", fullName: "Игорь Беляев", email: "client4@example.com", status: "active" },
+  { id: "u6", role: "consultant", fullName: "Екатерина Чжан", email: "consultant2@example.com", status: "active" },
+  { id: "u7", role: "consultant", fullName: "Алексей Гао", email: "consultant3@example.com", status: "active" }
 ];

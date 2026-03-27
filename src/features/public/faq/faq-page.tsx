@@ -49,13 +49,15 @@ export function FAQPage() {
   }, [query, category]);
 
   return (
-    <div className="space-y-6 py-8">
+    <div className="space-y-6 py-10">
       <div>
-        <h1 className="text-3xl font-semibold tracking-tight">FAQ</h1>
-        <p className="mt-2 text-sm text-[rgb(var(--text-muted))]">Ответы на популярные вопросы перед консультацией.</p>
+        <h1 className="text-3xl font-semibold tracking-tight">Частые вопросы</h1>
+        <p className="mt-2 max-w-3xl text-sm leading-7 text-[rgb(var(--text-muted))]">
+          Собрали ответы о выборе консультации, подготовке, оплате, формате работы, результате и сопровождении.
+        </p>
       </div>
 
-      <Card className="p-4">
+      <Card className="rounded-3xl p-4 sm:p-5">
         <div className="grid gap-3 md:grid-cols-2">
           <div>
             <div className="text-xs font-semibold uppercase tracking-wide text-[rgb(var(--text-muted))]">Поиск</div>
@@ -64,7 +66,7 @@ export function FAQPage() {
           <div>
             <div className="text-xs font-semibold uppercase tracking-wide text-[rgb(var(--text-muted))]">Категория</div>
             <select
-              className="focus-ring mt-2 h-10 w-full rounded-lg border border-[rgb(var(--border))] bg-[rgb(var(--surface))] px-3 text-sm"
+              className="focus-ring mt-2 h-11 w-full rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--surface))] px-3 text-sm"
               value={category}
               onChange={(e) => setCategory(e.target.value)}
             >
@@ -114,7 +116,7 @@ export function FAQPage() {
             }))}
           />
         ) : (
-          <EmptySearchState title="Ничего не найдено" description="Попробуйте другой запрос." />
+          <EmptySearchState title="Ничего не найдено" description="Измените формулировку запроса или выберите другую категорию." />
         )
       ) : null}
     </div>

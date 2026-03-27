@@ -10,7 +10,7 @@ type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
 };
 
 const variantClasses: Record<ButtonVariant, string> = {
-  primary: "bg-[rgb(var(--primary))] text-white hover:opacity-95",
+  primary: "bg-[rgb(var(--primary))] text-white shadow-[0_10px_24px_rgba(31,46,72,0.24)] hover:bg-[rgb(var(--primary))]/95",
   secondary: "bg-[rgb(var(--surface))] text-[rgb(var(--text))] border border-[rgb(var(--border))] hover:bg-[rgb(var(--surface-muted))]",
   ghost: "bg-transparent text-[rgb(var(--text))] hover:bg-[rgb(var(--surface-muted))]",
   danger: "bg-[rgb(var(--danger))] text-white hover:opacity-95"
@@ -18,8 +18,8 @@ const variantClasses: Record<ButtonVariant, string> = {
 
 const sizeClasses: Record<ButtonSize, string> = {
   sm: "h-9 px-3 text-sm",
-  md: "h-10 px-4 text-sm",
-  lg: "h-11 px-5 text-base"
+  md: "h-11 px-5 text-sm",
+  lg: "h-12 px-6 text-base"
 };
 
 export function Button({
@@ -34,7 +34,7 @@ export function Button({
   return (
     <button
       className={cn(
-        "focus-ring inline-flex items-center justify-center gap-2 rounded-lg font-medium transition disabled:cursor-not-allowed disabled:opacity-50",
+        "focus-ring inline-flex items-center justify-center gap-2 rounded-xl font-medium transition disabled:cursor-not-allowed disabled:opacity-50",
         variantClasses[variant],
         sizeClasses[size],
         className
@@ -42,7 +42,7 @@ export function Button({
       disabled={disabled || isLoading}
       {...props}
     >
-      {isLoading ? "Loading..." : children}
+      {isLoading ? "Загрузка..." : children}
     </button>
   );
 }
