@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#1F2E48" />
+      <stop offset="100%" stop-color="#2D3F5E" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <rect x="72" y="72" width="1056" height="486" rx="24" fill="none" stroke="#B49058" stroke-width="2" opacity="0.7" />
+  <text x="110" y="280" fill="#FFFFFF" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="74" font-weight="700">
+    VIBO Strategy
+  </text>
+  <text x="110" y="350" fill="#DDE3EC" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="34" font-weight="500">
+    !B@0B538G5A:0O ?;0BD>@<0 :>=AC;LB0F89
+  </text>
+  <text x="110" y="406" fill="#DDE3EC" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="28">
+     5H5=8O, ?@8>@8B5BK, 40BK 8 A>?@>2>645=85 2 >4=>< <5AB5
+  </text>
+</svg>
