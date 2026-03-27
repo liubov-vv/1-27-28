@@ -1,0 +1,370 @@
+{
+  "baseUrl": "http://localhost:3001",
+  "checkedAt": "2026-03-27T15:41:31.063Z",
+  "viewports": [
+    {
+      "name": "390x844",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "name": "375x812",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "name": "360x800",
+      "width": 360,
+      "height": 800
+    }
+  ],
+  "routes": [
+    "/",
+    "/about",
+    "/consultations",
+    "/consultants",
+    "/faq",
+    "/auth/login",
+    "/auth/register",
+    "/contacts"
+  ],
+  "issues": [],
+  "checked": [
+    {
+      "viewport": "390x844",
+      "route": "/",
+      "checks": [
+        {
+          "key": "horizontal-scroll",
+          "ok": true
+        },
+        {
+          "key": "home-cta-visible",
+          "ok": true
+        },
+        {
+          "key": "header-links-visible",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "viewport": "390x844",
+      "route": "/about",
+      "checks": [
+        {
+          "key": "horizontal-scroll",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "viewport": "390x844",
+      "route": "/consultations",
+      "checks": [
+        {
+          "key": "horizontal-scroll",
+          "ok": true
+        },
+        {
+          "key": "consultations-filters-interact",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "viewport": "390x844",
+      "route": "/consultants",
+      "checks": [
+        {
+          "key": "horizontal-scroll",
+          "ok": true
+        },
+        {
+          "key": "consultants-filters-interact",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "viewport": "390x844",
+      "route": "/faq",
+      "checks": [
+        {
+          "key": "horizontal-scroll",
+          "ok": true
+        },
+        {
+          "key": "faq-accordion-toggle",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "viewport": "390x844",
+      "route": "/auth/login",
+      "checks": [
+        {
+          "key": "horizontal-scroll",
+          "ok": true
+        },
+        {
+          "key": "form-visible",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "viewport": "390x844",
+      "route": "/auth/register",
+      "checks": [
+        {
+          "key": "horizontal-scroll",
+          "ok": true
+        },
+        {
+          "key": "form-visible",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "viewport": "390x844",
+      "route": "/contacts",
+      "checks": [
+        {
+          "key": "horizontal-scroll",
+          "ok": true
+        },
+        {
+          "key": "form-visible",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "viewport": "375x812",
+      "route": "/",
+      "checks": [
+        {
+          "key": "horizontal-scroll",
+          "ok": true
+        },
+        {
+          "key": "home-cta-visible",
+          "ok": true
+        },
+        {
+          "key": "header-links-visible",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "viewport": "375x812",
+      "route": "/about",
+      "checks": [
+        {
+          "key": "horizontal-scroll",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "viewport": "375x812",
+      "route": "/consultations",
+      "checks": [
+        {
+          "key": "horizontal-scroll",
+          "ok": true
+        },
+        {
+          "key": "consultations-filters-interact",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "viewport": "375x812",
+      "route": "/consultants",
+      "checks": [
+        {
+          "key": "horizontal-scroll",
+          "ok": true
+        },
+        {
+          "key": "consultants-filters-interact",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "viewport": "375x812",
+      "route": "/faq",
+      "checks": [
+        {
+          "key": "horizontal-scroll",
+          "ok": true
+        },
+        {
+          "key": "faq-accordion-toggle",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "viewport": "375x812",
+      "route": "/auth/login",
+      "checks": [
+        {
+          "key": "horizontal-scroll",
+          "ok": true
+        },
+        {
+          "key": "form-visible",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "viewport": "375x812",
+      "route": "/auth/register",
+      "checks": [
+        {
+          "key": "horizontal-scroll",
+          "ok": true
+        },
+        {
+          "key": "form-visible",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "viewport": "375x812",
+      "route": "/contacts",
+      "checks": [
+        {
+          "key": "horizontal-scroll",
+          "ok": true
+        },
+        {
+          "key": "form-visible",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "viewport": "360x800",
+      "route": "/",
+      "checks": [
+        {
+          "key": "horizontal-scroll",
+          "ok": true
+        },
+        {
+          "key": "home-cta-visible",
+          "ok": true
+        },
+        {
+          "key": "header-links-visible",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "viewport": "360x800",
+      "route": "/about",
+      "checks": [
+        {
+          "key": "horizontal-scroll",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "viewport": "360x800",
+      "route": "/consultations",
+      "checks": [
+        {
+          "key": "horizontal-scroll",
+          "ok": true
+        },
+        {
+          "key": "consultations-filters-interact",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "viewport": "360x800",
+      "route": "/consultants",
+      "checks": [
+        {
+          "key": "horizontal-scroll",
+          "ok": true
+        },
+        {
+          "key": "consultants-filters-interact",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "viewport": "360x800",
+      "route": "/faq",
+      "checks": [
+        {
+          "key": "horizontal-scroll",
+          "ok": true
+        },
+        {
+          "key": "faq-accordion-toggle",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "viewport": "360x800",
+      "route": "/auth/login",
+      "checks": [
+        {
+          "key": "horizontal-scroll",
+          "ok": true
+        },
+        {
+          "key": "form-visible",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "viewport": "360x800",
+      "route": "/auth/register",
+      "checks": [
+        {
+          "key": "horizontal-scroll",
+          "ok": true
+        },
+        {
+          "key": "form-visible",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "viewport": "360x800",
+      "route": "/contacts",
+      "checks": [
+        {
+          "key": "horizontal-scroll",
+          "ok": true
+        },
+        {
+          "key": "form-visible",
+          "ok": true
+        }
+      ]
+    }
+  ]
+}
