@@ -3,6 +3,7 @@ import { requireRole } from "@/lib/auth/session";
 import { api } from "@/lib/api";
 
 type ConsultantLayoutProps = Readonly<{ children: React.ReactNode }>;
+export const dynamic = "force-dynamic";
 
 const consultantNav = [
   { label: "Dashboard", href: "/consultant/dashboard" },

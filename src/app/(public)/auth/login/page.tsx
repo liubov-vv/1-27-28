@@ -86,7 +86,7 @@ export default function LoginPage() {
         <EmptyState title="Не удалось выполнить вход" description="Попробуйте ещё раз или смените способ входа." />
       ) : null}
 
-      {(state === "default" || state === "validation" || state === "loading") && state !== "success" && state !== "error" ? (
+      {state === "default" || state === "validation" || state === "loading" ? (
         <AuthForm
           title="Авторизация"
           submitLabel={state === "loading" ? "Выполняем вход..." : "Войти"}

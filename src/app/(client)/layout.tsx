@@ -3,6 +3,7 @@ import { requireRole } from "@/lib/auth/session";
 import { api } from "@/lib/api";
 
 type ClientLayoutProps = Readonly<{ children: React.ReactNode }>;
+export const dynamic = "force-dynamic";
 
 const clientNav = [
   { label: "Dashboard", href: "/client/dashboard" },

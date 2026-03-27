@@ -99,7 +99,7 @@ export default function RegisterPage() {
 
       {state === "error" ? <EmptyState title="Не удалось зарегистрироваться" description="Попробуйте позже или смените данные." /> : null}
 
-      {(state === "default" || state === "validation" || state === "loading") && state !== "success" && state !== "error" ? (
+      {state === "default" || state === "validation" || state === "loading" ? (
         <AuthForm
           title="Данные аккаунта"
           submitLabel={state === "loading" ? "Создаём аккаунт..." : "Зарегистрироваться"}

@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import type { BlogArticle, KnowledgeArticle } from "@/lib/types/models";
 
 type BaseArticle = {
   id: string;
@@ -15,7 +14,7 @@ type BaseArticle = {
 
 type ArticleCardProps = {
   href: string;
-  article: KnowledgeArticle | BlogArticle;
+  article: BaseArticle;
   variant: "knowledge" | "blog";
 };
 

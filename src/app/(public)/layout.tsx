@@ -1,6 +1,7 @@
 import { PublicShell } from "@/components/layout/public-shell";
 
 type PublicLayoutProps = Readonly<{ children: React.ReactNode }>;
+export const dynamic = "force-dynamic";
 
 export default function PublicLayout({ children }: PublicLayoutProps) {
   return <PublicShell>{children}</PublicShell>;

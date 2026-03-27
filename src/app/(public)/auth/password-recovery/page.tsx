@@ -73,7 +73,7 @@ export default function PasswordRecoveryPage() {
 
       {state === "error" ? <EmptyState title="Не удалось отправить письмо" description="Попробуйте позже." /> : null}
 
-      {(state === "default" || state === "validation" || state === "loading") && state !== "success" && state !== "error" ? (
+      {state === "default" || state === "validation" || state === "loading" ? (
         <AuthForm
           title="Проверьте email"
           submitLabel={state === "loading" ? "Отправляем..." : "Отправить ссылку"}
